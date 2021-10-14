@@ -2,9 +2,8 @@ package com.adaptionsoft.games.uglytrivia;
 
 import java.util.LinkedList;
 
-public class ScienceQuestions implements Questions{
+public class ScienceQuestions implements Questions {
     LinkedList<String> scienceQuestions = new LinkedList<>();
-    private String categoryName = "Science";
 
     @Override
     public void init() {
@@ -20,6 +19,6 @@ public class ScienceQuestions implements Questions{
 
     @Override
     public String getCategory() {
-        return categoryName;
+        return "Science";
     }
 }

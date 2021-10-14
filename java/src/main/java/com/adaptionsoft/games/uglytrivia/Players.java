@@ -10,31 +10,60 @@ public class Players {
     private String name;
     private int currentPlayer = 0;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    private final Places places;
+    private final Purses purses;
+    private final Penalty penalty;
 
-    public int getCurrentPlayer() {
-        return currentPlayer;
+    public Players(Places places, Purses purses, Penalty penalty) {
+        this.places = places;
+        this.purses = purses;
+        this.penalty = penalty;
+
+        this.places.init(players.size());
+        this.purses.init(players.size());
     }
 
     public void incrementCurrentPlayerOrReset() {
-        this.currentPlayer++;
+        currentPlayer++;
         if (currentPlayer == players.size())
             this.currentPlayer = 0;
-    }
-
-    public String get() {
-        return players.get(currentPlayer);
     }
 
     public void insert(String playerName) {
         name = playerName;
         players.add(playerName);
+        penalty.add(players.size());
     }
 
-    public int playersNumber() {
-        return players.size();
+    public int retrievePlaceForCurrentPlayer() {
+        return places.retrievePlace(currentPlayer);
+    }
+
+    public void updatePlace(int value) {
+        places.updatePlace(currentPlayer, value);
+    }
+
+    public boolean currentPlayerPurses() {
+        purses.incrementPurses(players.get(currentPlayer), currentPlayer);
+
+        incrementCurrentPlayerOrReset();
+        return purses.hasReachedThreshold(currentPlayer);
+    }
+
+    public boolean hasPenalty() {
+        return penalty.isPenalty(currentPlayer);
+    }
+
+    public void set() {
+        penalty.set(currentPlayer);
+    }
+
+    public boolean isGettingOutOfPenaltyBox() {
+        return penalty.isGettingOutOfPenaltyBox();
+    }
+
+    public void setGettingOutOfPenaltyBox(boolean gettingOutOfPenaltyBox) {
+        penalty.setGettingOutOfPenaltyBox(gettingOutOfPenaltyBox);
     }
 
     public String format(PlayerFormatter playerFormatter) {

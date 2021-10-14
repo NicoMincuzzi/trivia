@@ -8,19 +8,14 @@ import static java.util.Arrays.asList;
 
 public class Game {
     private final Players players;
-    private final Places places;
     private final PopQuestions popQuestions;
     private final ScienceQuestions scienceQuestions;
     private final SportsQuestions sportsQuestions;
     private final RockQuestions rockQuestions;
-    private final Purses purses;
-    private final Penalty penalty;
 
-    public Game(Players players, Places places, Purses purses, Penalty penalty, Questions... questions) {
+    public Game(Players players, Questions... questions) {
         this.players = players;
-        this.places = places;
-        this.purses = purses;
-        this.penalty = penalty;
+
         popQuestions = (PopQuestions) questions[0];
         scienceQuestions = (ScienceQuestions) questions[1];
         sportsQuestions = (SportsQuestions) questions[2];
@@ -31,10 +26,6 @@ public class Game {
 
     public void add(String playerName) {
         players.insert(playerName);
-        places.init();
-        purses.init();
-        penalty.add(players.playersNumber());
-
         System.out.println(players.msgPlayersNumber());
     }
 
@@ -42,45 +33,43 @@ public class Game {
         System.out.println(players.format(new CurrentPlayerFormatter()));
         System.out.println("They have rolled a " + roll);
 
-        if (penalty.isPenalty(players.getCurrentPlayer())) {
-            foo(roll);
+        if (players.hasPenalty()) {
+            players.updatePlace(roll);
+            System.out.println(players.format(new PlayerLocationFormatter(), players.retrievePlaceForCurrentPlayer()));
+            System.out.println("The category is " + currentCategory().getCategory() + "\n" + currentCategory().removeFirst());
             return;
         }
         if (roll % 2 != 0) {
-            penalty.setGettingOutOfPenaltyBox(true);
+            players.setGettingOutOfPenaltyBox(true);
 
             System.out.println(players.format(new GettingOutPenaltyBoxFormatter()));
-            foo(roll);
+            players.updatePlace(roll);
+            System.out.println(players.format(new PlayerLocationFormatter(), players.retrievePlaceForCurrentPlayer()));
+            System.out.println("The category is " + currentCategory().getCategory() + "\n" + currentCategory().removeFirst());
             return;
         }
         System.out.println(players.format(new NotGettingOutPenaltyBoxFormatter()));
-        penalty.setGettingOutOfPenaltyBox(false);
-    }
-
-    private void foo(int roll) {
-        places.updatePlace(roll);
-        System.out.println(players.format(new PlayerLocationFormatter(), places.retrievePlaceForCurrentPlayer()));
-        System.out.println("The category is " + currentCategory().getCategory() + "\n" + currentCategory().removeFirst());
+        players.setGettingOutOfPenaltyBox(false);
     }
 
     private Questions currentCategory() {
-        if (asList(0, 4, 8).contains(places.retrievePlaceForCurrentPlayer()))
+        if (asList(0, 4, 8).contains(players.retrievePlaceForCurrentPlayer()))
             return popQuestions;
-        if (asList(1, 5, 9).contains(places.retrievePlaceForCurrentPlayer()))
+        if (asList(1, 5, 9).contains(players.retrievePlaceForCurrentPlayer()))
             return scienceQuestions;
-        if (asList(2, 6, 10).contains(places.retrievePlaceForCurrentPlayer()))
+        if (asList(2, 6, 10).contains(players.retrievePlaceForCurrentPlayer()))
             return sportsQuestions;
         return rockQuestions;
     }
 
     public boolean wasCorrectlyAnswered() {
-        if (penalty.isPenalty(players.getCurrentPlayer())) {
+        if (players.hasPenalty()) {
             System.out.println("Answer was corrent!!!!");
-            return purses.bar();
+            return players.currentPlayerPurses();
         }
-        if (penalty.isGettingOutOfPenaltyBox()) {
+        if (players.isGettingOutOfPenaltyBox()) {
             System.out.println("Answer was correct!!!!");
-            return purses.bar();
+            return players.currentPlayerPurses();
         }
         players.incrementCurrentPlayerOrReset();
         return true;
@@ -88,7 +77,7 @@ public class Game {
 
     public boolean wrongAnswer() {
         System.out.println(players.format(new WrongAnswerFormatter()));
-        penalty.set(players.getCurrentPlayer());
+        players.set();
 
         players.incrementCurrentPlayerOrReset();
         return true;

@@ -5,41 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bec39635-e3a3-45fd-8773-ca9c81eea65a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/CurrentPlayerFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/GettingOutPenaltyBoxFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/NotGettingOutPenaltyBoxFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/Penalty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/Places.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/PlayerFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/PlayerLocationFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/PlayerNumberPlayerFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/Players.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/PopQuestions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/Purses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/Questions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/RockQuestions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/ScienceQuestions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/SportsQuestions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/WrongAnswerFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_easytesting_fest_assert_core_2_0M8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_easytesting_fest_util_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.sonar.ide.eclipse.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/trivia/runner/GameRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/trivia/runner/GameRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/Players.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/Players.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/Purses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adaptionsoft/games/uglytrivia/Purses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/adaptionsoft/games/trivia/SomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/adaptionsoft/games/trivia/SomeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trivia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/trivia.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -473,7 +444,8 @@
       <workItem from="1633109754985" duration="3392000" />
       <workItem from="1633172597076" duration="4240000" />
       <workItem from="1633252283615" duration="8199000" />
-      <workItem from="1633279416533" duration="3664000" />
+      <workItem from="1633279416533" duration="4101000" />
+      <workItem from="1634247355095" duration="4030000" />
     </task>
     <servers />
   </component>

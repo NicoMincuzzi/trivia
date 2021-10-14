@@ -4,7 +4,6 @@ import java.util.LinkedList;
 
 public class SportsQuestions implements Questions {
     private final LinkedList<String> sportsQuestions = new LinkedList<>();
-    private final String categoryName = "Sports";
 
     @Override
     public void init() {
@@ -20,6 +19,6 @@ public class SportsQuestions implements Questions {
 
     @Override
     public String getCategory() {
-        return categoryName;
+        return "Sports";
     }
 }

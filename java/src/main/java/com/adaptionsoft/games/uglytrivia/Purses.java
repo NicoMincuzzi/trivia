@@ -2,21 +2,18 @@ package com.adaptionsoft.games.uglytrivia;
 
 public class Purses {
     private final int[] purses = new int[6];
-    private final Players players;
 
-    public Purses(Players players) {
-        this.players = players;
+    public void init(int playersNumber) {
+        purses[playersNumber] = 0;
     }
 
-    public void init() {
-        purses[players.playersNumber()] = 0;
+    public void incrementPurses(String player, int currentPlayer) {
+        purses[currentPlayer]++;
+        System.out.println(player + " now has " + purses[currentPlayer] + " Gold Coins.");
+
     }
 
-    public boolean bar() {
-        purses[players.getCurrentPlayer()]++;
-        System.out.println(players.get() + " now has " + purses[players.getCurrentPlayer()] + " Gold Coins.");
-
-        players.incrementCurrentPlayerOrReset();
-        return !(purses[players.getCurrentPlayer()] == 6);
+    public boolean hasReachedThreshold(int currentPlayer) {
+        return !(purses[currentPlayer] == 6);
     }
 }

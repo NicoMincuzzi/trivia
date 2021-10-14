@@ -23,8 +23,8 @@ public class SomeTest {
         Questions scienceQuestions = new ScienceQuestions();
         Questions sportsQuestions = new SportsQuestions();
         Questions rockQuestions = new RockQuestions();
-        Players players = new Players();
-        Game aGame = new Game(players, new Places(players), new Purses(players), new Penalty(), popQuestions, scienceQuestions, sportsQuestions, rockQuestions);
+        Players players = new Players(new Places(), new Purses(), new Penalty());
+        Game aGame = new Game(players, popQuestions, scienceQuestions, sportsQuestions, rockQuestions);
 
         aGame.add("Chet");
         aGame.add("Pat");
@@ -42,8 +42,8 @@ public class SomeTest {
         Questions scienceQuestions = new ScienceQuestions();
         Questions sportsQuestions = new SportsQuestions();
         Questions rockQuestions = new RockQuestions();
-        Players players = new Players();
-        Game aGame = new Game(players, new Places(players), new Purses(players), new Penalty(), popQuestions, scienceQuestions, sportsQuestions, rockQuestions);
+        Players players = new Players(new Places(), new Purses(), new Penalty());
+        Game aGame = new Game(players, popQuestions, scienceQuestions, sportsQuestions, rockQuestions);
 
         aGame.add("Chet");
         aGame.add("Pat");
@@ -61,8 +61,8 @@ public class SomeTest {
         Questions scienceQuestions = new ScienceQuestions();
         Questions sportsQuestions = new SportsQuestions();
         Questions rockQuestions = new RockQuestions();
-        Players players = new Players();
-        Game aGame = new Game(players, new Places(players), new Purses(players), new Penalty(), popQuestions, scienceQuestions, sportsQuestions, rockQuestions);
+        Players players = new Players(new Places(), new Purses(), new Penalty());
+        Game aGame = new Game(players, popQuestions, scienceQuestions, sportsQuestions, rockQuestions);
 
         aGame.add("Chet");
         aGame.add("Pat");
@@ -79,8 +79,8 @@ public class SomeTest {
         Questions scienceQuestions = new ScienceQuestions();
         Questions sportsQuestions = new SportsQuestions();
         Questions rockQuestions = new RockQuestions();
-        Players players = new Players();
-        Game aGame = new Game(players, new Places(players), new Purses(players), new Penalty(), popQuestions, scienceQuestions, sportsQuestions, rockQuestions);
+        Players players = new Players(new Places(), new Purses(), new Penalty());
+        Game aGame = new Game(players, popQuestions, scienceQuestions, sportsQuestions, rockQuestions);
 
         aGame.add("Chet");
         aGame.add("Pat");
